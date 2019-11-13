@@ -21,6 +21,8 @@ public:
   void enqueue_adds_to_back();
   void dequeue_removes_from_front();
   void dequeue_throws_excep_on_empty();
+  void peek_front_throws_excep_on_empty();
+  void peek_front_doesnt_change_queue();
 private:
   Queue myQueue;
 

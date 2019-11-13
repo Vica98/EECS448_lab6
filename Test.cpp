@@ -11,6 +11,7 @@ is_empty_after_dequeue();
 enqueue_adds_to_back();
 dequeue_removes_from_front();
 dequeue_throws_excep_on_empty();
+peek_front_throws_excep_on_empty();
 }
 
 
@@ -109,6 +110,32 @@ void Test::dequeue_throws_excep_on_empty()
   myQueue.dequeue();
   try{
   myQueue.dequeue();
+  cout<<"FAILED \n";
+  }catch(runtime_error e)
+  {
+  cout<<"PASSED \n";
+  }
+}
+
+//TESTS FOR PEEK FRONT.............................................................
+void Test::peek_front_throws_excep_on_empty()
+{
+  cout<<"Peek front throws exception when called on empty queue: ";
+  try{
+  myQueue.peekFront();
+  cout<<"FAILED \n";
+  }catch(runtime_error e)
+  {
+  cout<<"PASSED \n";
+  }
+}
+
+//METHOD NOT FINISHED, FINISH IT
+void Test::peek_front_doesnt_change_queue()
+{
+  cout<<"Peek front doesnt change queue when called: ";
+  try{
+  myQueue.peekFront();
   cout<<"FAILED \n";
   }catch(runtime_error e)
   {
