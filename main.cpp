@@ -12,7 +12,7 @@
 int main()
 {
 	Queue q;
-	Test t(q);
+	Test t;
 
 	return(0);
 }

@@ -13,7 +13,7 @@
 class Test
 {
 public:
-  Test(Queue theQueue);
+  Test();
   ~Test();
   void is_empty_at_creation();
   void is_empty_after_enqueue();
@@ -22,9 +22,11 @@ public:
   void dequeue_removes_from_front();
   void dequeue_throws_excep_on_empty();
   void peek_front_throws_excep_on_empty();
+  void peek_returns_as_expected();
   void peek_front_doesnt_change_queue();
+  void enqueue_after_dequeue();
+  Queue* myQueue;
 private:
-  Queue myQueue;
 
 };
 #endif

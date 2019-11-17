@@ -1,0 +1,16 @@
+Bug List
+
+1)Queue as a whole does not work how it is supposed to, it works in the way first in, last out instead of first in, first out.
+  There is two reasons why this could happen:
+  a)Either enqueue does not work properly and it enqueues the last element to be at the front of the list instead of the opposite or,
+  b)Dequeue and Peak Front are not working as intendent. Assuming enqueue works fine, peak front shows the last element of the list while dequeue also
+    removes the last element of the list instead of the first one in both dequeue and peak front.
+Both problems are possible and, with the methods I have access to, I am not able to know which one is the faulty one because both theories create the
+exact same situation. I attached a picture that explains a little more about the problem.
+
+2)The destructor does not work. When I create a heap allocated Queue and call to delete, Valgrid shows that there are still some things in heap, that
+means that the destructor is not working properly and not deleting the necessary things.
+
+3)Dequeue "return" is wrong in the comments. I am pretty sure it was a typo, but line 43 of the Queue class says that it returns the first item of the queue,
+but obviously, this is not true because the function is a void and does not return anything. I just wanted to list this in case it is considered a bug even if it
+does not affect the actual code but affects the expectations of the people who read the code.

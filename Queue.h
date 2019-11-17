@@ -40,7 +40,6 @@ class Queue : public QueueInterface<int>
 
 	/**
 	*	@post Front of the queue is removed
-	//I THINK THIS IS A BUG BECAUSE IT CANNOT RESTURN THE CLAUE OF THE ENTRY SINCE IT IS A VOID
 	*	@return The value of the entry at the front of the queue
 	*	@throw std::runtime_error if queue is empty
 	*/
